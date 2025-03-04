@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumus Excel - Belajar Shortcut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Belajar Shortcut</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#beranda">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#word">MS Word</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#excel">MS Excel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="rumus.html">Rumus Excel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3'); background-size: cover; background-position: center; color: white;">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Rumus Excel Dasar</h1>
+            <p class="lead mb-4">Pelajari rumus-rumus dasar Excel untuk meningkatkan produktivitas kerja Anda</p>
+        </div>
+    </section>
+
+    <!-- Rumus IF Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Rumus IF</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="card-title mb-0">IF Dasar</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#syntaxIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Sintaks</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="syntaxIF">
+                                        <div class="mt-2">
+                                            <code>=IF(logical_test, value_if_true, value_if_false)</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#example1IF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="example1IF">
+                                        <div class="mt-2">
+                                            <code>=IF(A1>70, "Lulus", "Tidak Lulus")</code>
+                                            <p class="mt-2">Jika nilai di sel A1 lebih dari 70, maka hasilnya "Lulus", jika tidak maka "Tidak Lulus"</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#example2IF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Lainnya</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="example2IF">
+                                        <div class="mt-2">
+                                            <code>=IF(AND(A1>=0, A1<=100), "Valid", "Invalid")</code>
+                                            <p class="mt-2">Memeriksa apakah nilai di sel A1 berada dalam rentang 0-100</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#example3IF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Text</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="example3IF">
+                                        <div class="mt-2">
+                                            <code>=IF(UPPER(A1)="YES", "Disetujui", "Ditolak")</code>
+                                            <p class="mt-2">Memeriksa jika teks di sel A1 adalah "YES" (tidak case sensitive)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleDateIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Tanggal</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleDateIF">
+                                        <div class="mt-2">
+                                            <code>=IF(TODAY()>A1, "Sudah Lewat", "Masih Berlaku")</code>
+                                            <p class="mt-2">Memeriksa apakah tanggal di sel A1 sudah lewat dari hari ini</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleCalcIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Perhitungan</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleCalcIF">
+                                        <div class="mt-2">
+                                            <code>=IF(A1*2>100, "Besar", "Kecil")</code>
+                                            <p class="mt-2">Melakukan perhitungan sebelum membuat keputusan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleBlankIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan ISBLANK</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleBlankIF">
+                                        <div class="mt-2">
+                                            <code>=IF(ISBLANK(A1), "Data Kosong", "Data Terisi")</code>
+                                            <p class="mt-2">Memeriksa apakah sel A1 kosong atau sudah terisi</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNumberIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan ISNUMBER</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNumberIF">
+                                        <div class="mt-2">
+                                            <code>=IF(ISNUMBER(A1), A1*2, "Bukan Angka")</code>
+                                            <p class="mt-2">Jika sel A1 berisi angka, kalikan dengan 2, jika tidak, tampilkan pesan error</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="card-title mb-0">IF Bersarang (Nested IF)</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#syntaxNestedIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Sintaks:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="syntaxNestedIF">
+                                        <div class="mt-2">
+                                            <code>=IF(test1, value1, IF(test2, value2, value3))</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF">
+                                        <div class="mt-2">
+                                            <code>=IF(A1>=80, "A", IF(A1>=70, "B", IF(A1>=60, "C", "D")))</code>
+                                            <p class="mt-2">Menentukan grade nilai berdasarkan rentang nilai tertentu</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF2" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Status Karyawan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF2">
+                                        <div class="mt-2">
+                                            <code>=IF(A1="Tetap", IF(B1>=5, "Senior", "Junior"), IF(A1="Kontrak", "Kontrak", "Magang"))</code>
+                                            <p class="mt-2">Menentukan status karyawan berdasarkan jenis (Tetap/Kontrak) dan masa kerja</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF3" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Bonus Penjualan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF3">
+                                        <div class="mt-2">
+                                            <code>=IF(A1>1000000, IF(B1>12, "Bonus 15%", "Bonus 10%"), IF(A1>500000, "Bonus 5%", "Tidak Ada Bonus"))</code>
+                                            <p class="mt-2">Menghitung bonus berdasarkan nilai penjualan dan masa kerja dalam bulan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF4" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Status Pembayaran:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF4">
+                                        <div class="mt-2">
+                                            <code>=IF(A1="Lunas", "Selesai", IF(B1>TODAY(), "Dalam Tenor", IF(C1>0, "Cicilan Terlambat", "Belum Bayar")))</code>
+                                            <p class="mt-2">Menentukan status pembayaran berdasarkan kondisi pelunasan, tanggal jatuh tempo, dan cicilan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF5" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Kategori Produk:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF5">
+                                        <div class="mt-2">
+                                            <code>=IF(A1="Elektronik", IF(B1>5000000, "Premium", "Standar"), IF(A1="Pakaian", IF(C1="Import", "Premium", "Lokal"), "Lainnya"))</code>
+                                            <p class="mt-2">Mengkategorikan produk berdasarkan jenis, harga, dan asal produk</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF6" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Status Kelulusan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF6">
+                                        <div class="mt-2">
+                                            <code>=IF(AND(A1>=75, B1>=80), "Lulus Dengan Distinction", IF(AND(A1>=60, B1>=65), "Lulus", IF(OR(A1<60, B1<65), "Tidak Lulus", "Data Tidak Valid")))</code>
+                                            <p class="mt-2">Menentukan status kelulusan berdasarkan nilai teori (A1) dan praktik (B1)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF7" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Status Stok:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF7">
+                                        <div class="mt-2">
+                                            <code>=IF(A1=0, "Stok Habis", IF(AND(A1>0, A1<=B1), "Perlu Restock", IF(A1>B1, "Stok Aman", "Data Tidak Valid")))</code>
+                                            <p class="mt-2">Menentukan status stok barang berdasarkan jumlah stok tersedia (A1) dan batas minimum stok (B1)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF8" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Nilai Akhir:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF8">
+                                        <div class="mt-2">
+                                            <code>=IF(AND(A1>=0,A1<=100), IF(B1>=0.7, A1*B1, IF(B1>=0.5, A1*B1*0.8, A1*B1*0.6)), "Nilai Tidak Valid")</code>
+                                            <p class="mt-2">Menghitung nilai akhir berdasarkan nilai ujian (A1) dan tingkat kehadiran (B1)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#exampleNestedIF9" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Prioritas Pengiriman:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="exampleNestedIF9">
+                                        <div class="mt-2">
+                                            <code>=IF(A1="Express", IF(B1<=5, "Kirim Hari Ini", "Kirim Besok"), IF(A1="Regular", IF(C1>1000000, "Prioritas", "Antrian Normal"), "Tipe Tidak Valid"))</code>
+                                            <p class="mt-2">Menentukan prioritas pengiriman berdasarkan tipe layanan (A1), jumlah antrian (B1), dan nilai pesanan (C1)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rumus SUM Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Rumus SUM</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="card-title mb-0">SUM Dasar</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumBasicSyntax" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Sintaks:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumBasicSyntax">
+                                        <div class="mt-2">
+                                            <code>=SUM(number1, [number2], ...)</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumBasicExample" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumBasicExample">
+                                        <div class="mt-2">
+                                            <code>=SUM(A1:A10)</code>
+                                            <p class="mt-2">Menjumlahkan semua nilai dalam rentang sel A1 sampai A10</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="card-title mb-0">SUM dengan Kondisi</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumifSyntax" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">SUMIF:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumifSyntax">
+                                        <div class="mt-2">
+                                            <code>=SUMIF(range, criteria, [sum_range])</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumifExample" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumifExample">
+                                        <div class="mt-2">
+                                            <code>=SUMIF(B1:B10, ">=1000", C1:C10)</code>
+                                            <p class="mt-2">Menjumlahkan nilai di range C1:C10 jika nilai di B1:B10 lebih besar atau sama dengan 1000</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample1" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Penjualan Bulanan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample1">
+                                        <div class="mt-2">
+                                            <code>=SUM(B2:B13)</code>
+                                            <p class="mt-2">Menjumlahkan total penjualan selama 12 bulan (dari sel B2 sampai B13)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample2" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Multiple Range:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample2">
+                                        <div class="mt-2">
+                                            <code>=SUM(A1:A10,C1:C10,E1:E10)</code>
+                                            <p class="mt-2">Menjumlahkan nilai dari tiga kolom berbeda sekaligus</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample3" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Nilai Tetap:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample3">
+                                        <div class="mt-2">
+                                            <code>=SUM(A1:A5,100,200)</code>
+                                            <p class="mt-2">Menjumlahkan range sel dengan nilai tetap tambahan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample4" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Matriks:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample4">
+                                        <div class="mt-2">
+                                            <code>=SUM(A1:C3)</code>
+                                            <p class="mt-2">Menjumlahkan semua nilai dalam matriks 3x3</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample5" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Non-Adjacent:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample5">
+                                        <div class="mt-2">
+                                            <code>=SUM(B2,B4,B6,B8)</code>
+                                            <p class="mt-2">Menjumlahkan nilai dari sel-sel yang tidak bersebelahan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample6" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Fungsi Bersarang:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample6">
+                                        <div class="mt-2">
+                                            <code>=SUM(MAX(A1:A5), MIN(B1:B5))</code>
+                                            <p class="mt-2">Menjumlahkan nilai maksimum dari range A1:A5 dengan nilai minimum dari range B1:B5</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample7" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Referensi 3D:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample7">
+                                        <div class="mt-2">
+                                            <code>=SUM(Sheet1:Sheet12!A1)</code>
+                                            <p class="mt-2">Menjumlahkan nilai sel A1 dari Sheet1 hingga Sheet12</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample8" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Operator Perbandingan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample8">
+                                        <div class="mt-2">
+                                            <code>=SUM((A1:A10>0)*(A1:A10))</code>
+                                            <p class="mt-2">Menjumlahkan hanya nilai positif dalam range A1:A10</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample9" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Named Range:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample9">
+                                        <div class="mt-2">
+                                            <code>=SUM(Penjualan_Q1, Penjualan_Q2)</code>
+                                            <p class="mt-2">Menjumlahkan nilai dari dua named range yang telah didefinisikan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#sumExample10" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Offset:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="sumExample10">
+                                        <div class="mt-2">
+                                            <code>=SUM(OFFSET(A1,0,0,5,2))</code>
+                                            <p class="mt-2">Menjumlahkan nilai dalam area dinamis 5 baris x 2 kolom dimulai dari sel A1</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rumus VLOOKUP Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Rumus VLOOKUP</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="card-title mb-0">VLOOKUP Dasar</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupSyntax" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Sintaks:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupSyntax">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample1" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Pencarian Harga Produk:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample1">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(A2, Products!A2:C100, 2, FALSE)</code>
+                                            <p class="mt-2">Mencari harga produk berdasarkan kode produk di kolom A2</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample2" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Range Lookup:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample2">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(B5, Grades!A2:B10, 2, TRUE)</code>
+                                            <p class="mt-2">Mencari grade nilai berdasarkan rentang nilai</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample3" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Multiple Sheets:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample3">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(A1, Sheet2!$A$1:$D$100, 4, FALSE)</code>
+                                            <p class="mt-2">Mencari data dari sheet lain dengan referensi absolut</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample4" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan IFERROR:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample4">
+                                        <div class="mt-2">
+                                            <code>=IFERROR(VLOOKUP(A2, Database!A:D, 3, FALSE), "Data Tidak Ditemukan")</code>
+                                            <p class="mt-2">Menangani error jika data tidak ditemukan</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample5" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Named Range:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample5">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(CustomerID, CustomerDatabase, 3, FALSE)</code>
+                                            <p class="mt-2">Menggunakan named range untuk memudahkan referensi</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#vlookupExample6" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Nested VLOOKUP:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="vlookupExample6">
+                                        <div class="mt-2">
+                                            <code>=VLOOKUP(VLOOKUP(A1, Table1!A:B, 2, FALSE), Table2!A:C, 3, FALSE)</code>
+                                            <p class="mt-2">Menggunakan hasil VLOOKUP sebagai input untuk VLOOKUP lainnya</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="card-title mb-0">HLOOKUP Dasar</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupSyntax" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Sintaks:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupSyntax">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample1" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh Data Kuartalan:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample1">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP("Q2", A1:E3, 2, FALSE)</code>
+                                            <p class="mt-2">Mencari data penjualan untuk kuartal kedua</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample2" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Multiple Rows:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample2">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP(B1, Data!A1:F4, 3, FALSE)</code>
+                                            <p class="mt-2">Mencari data dari baris ketiga berdasarkan header</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample3" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Text Match:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample3">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP("*" & A1 & "*", Database!A1:E5, 4, FALSE)</code>
+                                            <p class="mt-2">Mencari data dengan partial match menggunakan wildcard</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample4" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Named Range:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample4">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP(ProductCode, ProductMatrix, 2, FALSE)</code>
+                                            <p class="mt-2">Menggunakan named range untuk tabel pencarian</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample5" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan IFERROR:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample5">
+                                        <div class="mt-2">
+                                            <code>=IFERROR(HLOOKUP(C1, Table!A1:D4, 3, FALSE), "No Data")</code>
+                                            <p class="mt-2">Menangani error dengan pesan kustom</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#hlookupExample6" role="button" aria-expanded="false">
+                                        <h5 class="mb-0">Contoh dengan Multiple HLOOKUP:</h5>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="collapse" id="hlookupExample6">
+                                        <div class="mt-2">
+                                            <code>=HLOOKUP(A1, Sheet1!A1:E5, 2, FALSE) + HLOOKUP(A1, Sheet2!A1:E5, 2, FALSE)</code>
+                                            <p class="mt-2">Menjumlahkan hasil dari dua HLOOKUP berbeda</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>Tentang Kami</h5>
+                <p>Website ini dibuat untuk membantu Anda mempelajari shortcut keyboard yang berguna untuk meningkatkan produktivitas dalam penggunaan Microsoft Office dan File Explorer.</p>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5>Tautan Berguna</h5>
+                <ul class="footer-links">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#word">Microsoft Word</a></li>
+                    <li><a href="#excel">Microsoft Excel</a></li>
+                    <li><a href="#explorer">File Explorer</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Ikuti Kami</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-4 mb-3 border-light">
+        <div class="text-center">
+            <p class="mb-0">&copy;nofrinto.flory 2025 Belajar Shortcut. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
