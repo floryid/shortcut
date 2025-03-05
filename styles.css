@@ -23,12 +23,12 @@
 .card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(219, 248, 4);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgb(60, 245, 4);
 }
 
 .card-header {
@@ -96,4 +96,44 @@
 
 .social-links a:hover {
     color: #ffffff;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgb(56, 3, 247);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.skill-card h3 {
+    color: #FFD700;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px rgb(5, 224, 253);
+}
+
+.skill-card p {
+    color: #333;
+    margin-bottom: 0;
 }
